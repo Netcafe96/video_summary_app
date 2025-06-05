@@ -1,20 +1,9 @@
-# Video Summary App
+# 🎬 Video Script Cutter
 
-This Streamlit application allows users to upload a video and a summary script, automatically extracting relevant clips from the video based on the script.
+A Streamlit app that lets you upload a video and a short script summary, automatically detect scenes, and cut clips matching the script (max 10s each).
 
-## Requirements
+## 🚀 How to Run
 
-- Python 3.7 or higher
-- Streamlit
-- MoviePy
-- SceneDetect
-- Whisper
-- Torch
-- Sentence Transformers
-
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/video_summary_app.git
-   cd video_summary_app
+```bash
+pip install -r requirements.txt
+streamlit run streamlit_app.py
