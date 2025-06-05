@@ -1,9 +1,6 @@
 from moviepy.editor import VideoFileClip
 
 def detect_scenes(video_path, max_duration=10):
-    """
-    Tạm thay thế phát hiện cảnh bằng cách chia đều video thành các đoạn nhỏ.
-    """
     clip = VideoFileClip(video_path)
     total_duration = clip.duration
 
