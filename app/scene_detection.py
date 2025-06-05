@@ -1,12 +1,17 @@
-from scenedetect import VideoManager, SceneManager
-from scenedetect.detectors import ContentDetector
+from moviepy.editor import VideoFileClip
 
-def detect_scenes(video_path):
-    video_manager = VideoManager([video_path])
-    scene_manager = SceneManager()
-    scene_manager.add_detector(ContentDetector())
-    video_manager.set_downscale_factor()
-    video_manager.start()
-    scene_manager.detect_scenes(frame_source=video_manager)
-    return scene_manager.get_scene_list()
+def detect_scenes(video_path, max_duration=10):
+    """
+    Tạm thay thế phát hiện cảnh bằng cách chia đều video thành các đoạn nhỏ.
+    """
+    clip = VideoFileClip(video_path)
+    total_duration = clip.duration
 
+    scenes = []
+    start = 0
+    while start < total_duration:
+        end = min(start + max_duration, total_duration)
+        scenes.append((start, end))
+        start = end
+
+    return scenes
