@@ -4,6 +4,4 @@ whisper
 faster-whisper
 transformers
 torch
-scenedetect
 sentence-transformers
-av
