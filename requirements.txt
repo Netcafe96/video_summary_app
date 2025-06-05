@@ -2,9 +2,9 @@ streamlit
 moviepy==1.0.3
 imageio
 imageio-ffmpeg
+opencv-python   
 whisper
 faster-whisper
 transformers
 torch
-sentence-transformers
-opencv-python
+sentence-transformer
