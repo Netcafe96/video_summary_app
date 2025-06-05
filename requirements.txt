@@ -7,3 +7,4 @@ faster-whisper
 transformers
 torch
 sentence-transformers
+opencv-python
