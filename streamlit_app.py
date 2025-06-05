@@ -1,4 +1,10 @@
 import streamlit as st
+import sys
+import os
+
+# Thêm đường dẫn để chắc chắn Python thấy được thư mục app/
+sys.path.append(os.path.abspath("."))
+
 from app.utils import save_uploaded_file
 from app.scene_detection import detect_scenes
 from app.clip_selector import generate_clips
